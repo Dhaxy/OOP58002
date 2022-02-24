@@ -1,0 +1,708 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled3.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOGRfLYNreiQXI4CgphgH65",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Dhaxy/OOP58002/blob/main/Operations%20and%20Expressions\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "*italicized text*"
+      ],
+      "metadata": {
+        "id": "75RhcBhR-aJT"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Boolean Operators"
+      ],
+      "metadata": {
+        "id": "52tbsVlW-bWy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PwmBbwbf8aN5",
+        "outputId": "bfed3f2b-c384-460b-b58c-dbe40c05723e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(10>9)\n",
+        "print(10<9)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 7\n",
+        "b = 6\n",
+        "\n",
+        "print(10>9)\n",
+        "print(10<9)\n",
+        "print(a>b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OnBZgBEa85F0",
+        "outputId": "e1b731ba-4077-4413-9d3b-5532daadd529"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "bool() function"
+      ],
+      "metadata": {
+        "id": "SWKHKZ0g9mqr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(bool(\"Dhax\"))\n",
+        "print(bool(1))\n",
+        "print(bool(0))\n",
+        "print(bool(None))\n",
+        "print(bool(False))\n",
+        "print(bool(True))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UUNuDNgp87di",
+        "outputId": "16a3dbf8-2788-47d8-b684-48880e7d8115"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "True\n",
+            "False\n",
+            "False\n",
+            "False\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Functions can return a Boolean"
+      ],
+      "metadata": {
+        "id": "n2dfMKDZ-HDy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def my_Function():\n",
+        "  return True\n",
+        "\n",
+        "print(my_Function())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ak8nAQNG8_47",
+        "outputId": "9bbc48f5-4c31-456d-ad0e-74a747b1802a"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if my_Function():\n",
+        "  print(\"True\")\n",
+        "else:\n",
+        "  print(\"False\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "_Jh0cZmz9C1i",
+        "outputId": "d1eaaa87-ee7b-41c3-8c7c-80140ec29ce6"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Application 1"
+      ],
+      "metadata": {
+        "id": "mbazFI1Q-stz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(a==b)\n",
+        "print(a<b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "J-Ghxyot9FNy",
+        "outputId": "3969b9f9-df8a-4a26-d23d-bb553938cbad"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Python Operators"
+      ],
+      "metadata": {
+        "id": "3M3g7RIs-qMa"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(10+5)\n",
+        "print(10-5)\n",
+        "print(10/3)\n",
+        "print(10*5)\n",
+        "print(10%5)\n",
+        "print(10//3)\n",
+        "print(10**2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nozdoB7G9G9q",
+        "outputId": "575b2dd3-91a0-41ec-e762-c3af486900f1"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "15\n",
+            "5\n",
+            "3.3333333333333335\n",
+            "50\n",
+            "0\n",
+            "3\n",
+            "100\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Bitwise Operators"
+      ],
+      "metadata": {
+        "id": "Wn9DlOp0-nVz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c = 60 # binary 0011 1100\n",
+        "d = 13 # binary 0000 1101\n",
+        "\n",
+        "c&d\n",
+        "print(c|d)\n",
+        "print(c^d)\n",
+        "\n",
+        "print(d<<2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "p3pS-uHf9JeK",
+        "outputId": "c829f97e-9a2e-4a36-e096-697d3a41010a"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "61\n",
+            "49\n",
+            "52\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "h = True\n",
+        "l = False\n",
+        "h and l\n",
+        "h or l\n",
+        "not (h or l)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Hptld-B-9MnD",
+        "outputId": "4e75eb8e-a204-498a-8053-683e619aef76"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "False"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Python Assignment Operators"
+      ],
+      "metadata": {
+        "id": "MCXwDvlS-kep"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x= 10\n",
+        "\n",
+        "print(10+3)\n",
+        "print(10-3)\n",
+        "print(10/3)\n",
+        "print(10*3)\n",
+        "print(10%3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QWtXuN2Q9OQs",
+        "outputId": "a623be58-6f27-4152-9b2e-42f39fa30b57"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "13\n",
+            "7\n",
+            "3.3333333333333335\n",
+            "30\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "h is l\n",
+        "h is not l"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "r2v66A719S0T",
+        "outputId": "71d8b3a8-f89e-4d78-d18f-a1f3828466bd"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "True"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "CONTROL STRUCTURE"
+      ],
+      "metadata": {
+        "id": "1bGqrnYX9WcD"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "If statement"
+      ],
+      "metadata": {
+        "id": "5bq72Z6L-2xK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if print(a<b):\n",
+        "  print(\"a is greater than b\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PShcEeRI9YPr",
+        "outputId": "6a5fd40d-a03f-4e60-fdeb-efa7ff3c5c45"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Short Hand if statement"
+      ],
+      "metadata": {
+        "id": "ni-xIn6G---i"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if print(a==b): print(\"a is equal to b\")"
+      ],
+      "metadata": {
+        "id": "EWH1CwzW-_si"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Short Hand If...else satement"
+      ],
+      "metadata": {
+        "id": "wyUzhvex_D0R"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 10\n",
+        "b = 9\n",
+        "print(\"a is greater than b\")if (a<b) else (\"b is greater than a\")"
+      ],
+      "metadata": {
+        "id": "YRbWEFsC_Fmp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "And"
+      ],
+      "metadata": {
+        "id": "M1-nAJNa_H1D"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if a and b:\n",
+        "  print(\"Yes\")"
+      ],
+      "metadata": {
+        "id": "dj_HlZQb_Nai"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Or"
+      ],
+      "metadata": {
+        "id": "Xki_8P71_OCb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if a<b or b==b:\n",
+        "  print(\"Both condition is True\")"
+      ],
+      "metadata": {
+        "id": "ezFNpEB5_Ueq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Nested If"
+      ],
+      "metadata": {
+        "id": "RPmvH0-4_U-F"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 31\n",
+        "if x>10:\n",
+        "  print(\"x is above 10\")\n",
+        "  if x>20:\n",
+        "    print(\"and also above 20\")\n",
+        "  if x>30:\n",
+        "    print(\"and also above 30\")\n",
+        "    if x>40:\n",
+        "      print(\"and also above 40\")\n",
+        "    else:\n",
+        "      print(\"but not above 40\")"
+      ],
+      "metadata": {
+        "id": "kVm1ybZC_W_p"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Loop Statement"
+      ],
+      "metadata": {
+        "id": "9yOo2Iwx_aiC"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "For Loop"
+      ],
+      "metadata": {
+        "id": "Wvx2DzTd_bZb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "week = [\"Sunday, Monday, Tuesday, Wednesday, Thursday, Friday\"]\n",
+        "\n",
+        "for x in week:\n",
+        "  print(x)"
+      ],
+      "metadata": {
+        "id": "DxpXMTxS_dB5"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The break statement"
+      ],
+      "metadata": {
+        "id": "-7BaaBmu_gRi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#to display Sunday to Wednesday using For loop\n",
+        "for x in week:\n",
+        "  print(x)\n",
+        "  if x==\"Wednesday\":\n",
+        "    break"
+      ],
+      "metadata": {
+        "id": "NwieEkyR_hYx"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#to display Sunday to Wednesday using break loop\n",
+        "for x in week:\n",
+        "  if x==\"Wednesday\":\n",
+        "    break\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "id": "7OXy4kk4_kyq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "While statement"
+      ],
+      "metadata": {
+        "id": "eQbUSzOb_0SJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i = 1\n",
+        "while i<6:\n",
+        "  print(i)\n",
+        "  i+=1"
+      ],
+      "metadata": {
+        "id": "Q5Ypp1xM_1Ci"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Application 3 - Create a python program that display 3"
+      ],
+      "metadata": {
+        "id": "Rijfo8iL_4g5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i = 1\n",
+        "while i<6:\n",
+        "  if i==3:\n",
+        "    break\n",
+        "  i+=1\n",
+        "print(i)"
+      ],
+      "metadata": {
+        "id": "nkGB2l3S_5Iq"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
