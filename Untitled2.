@@ -1,0 +1,193 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNFS9IKd8BMHo63UKyD3/0L",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Dhaxy/OOP58002/blob/main/Untitled2.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "3kDBsx2J2FhV"
+      },
+      "outputs": [],
+      "source": [
+        "class Car:\n",
+        "  pass"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Car:\n",
+        "  def __init__(self,name,color):\n",
+        "    self.name = name\n",
+        "    self.color = color\n",
+        "\n",
+        "  def description(self):\n",
+        "    return\"The\"+ self.name+\"has a color\"+self.color\n",
+        "\n",
+        "  def show(self):\n",
+        "    print(\"The \"+self.name+\"has a color\"+self.color)\n",
+        "\n",
+        "car1 = Car(\"Buggati \",\" white\")\n",
+        "car1.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1qvWv7PR3vDS",
+        "outputId": "7c35030b-dd9b-4607-c50e-f38375fa8c21"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The Buggati has a color white\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  def __init__(self,name,age):\n",
+        "    self.name = name\n",
+        "    self.age = age\n",
+        "  def myFunction(self):\n",
+        "    print(\"Hello! My name is\",self.name)\n",
+        "    print(\"I am\",self.age)\n",
+        "  \n",
+        "p1= Person(\"Dhax\",20)\n",
+        "p1.myFunction()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kx9gi0uQ35qx",
+        "outputId": "f9dfca15-3513-4c35-eff9-e9832d875ee0"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello! My name is Dhax\n",
+            "I am 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "car1.name =\"Mustang \"\n",
+        "print(car1.name)\n",
+        "\n",
+        "car1.color = \"White\"\n",
+        "print(car1.color)\n",
+        "\n",
+        "car1.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D5Qsj5UZ4FbC",
+        "outputId": "41027aff-453e-414f-c344-284842118395"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mustang \n",
+            "White\n",
+            "The Mustang has a colorWhite\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "del car1.name\n",
+        "print(car1.color)"
+      ],
+      "metadata": {
+        "id": "gsApM4WT4T7R"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Square:\n",
+        "  def __init__(self,side):\n",
+        "    self.side = side\n",
+        "\n",
+        "  def Area(self):\n",
+        "    return self.side*self.side\n",
+        "\n",
+        "  def Perimeter(self):\n",
+        "    return 4*(self.side)\n",
+        "\n",
+        "  def display(self):\n",
+        "    print(\"The area of a square is\",self.Area())\n",
+        "    print(\"The area of a square is\",self.Area())\n",
+        "\n",
+        "sq1 = Square(4)\n",
+        "sq1.display()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IiyT78Rv447q",
+        "outputId": "97f47700-3681-401a-abb8-9591ea758e9a"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The area of a square is 16\n",
+            "The area of a square is 16\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
