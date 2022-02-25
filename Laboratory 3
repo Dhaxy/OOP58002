@@ -1,0 +1,66 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOBnjxOLsLyrO647sh+lZeo",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Dhaxy/OOP58002/blob/main/Laboratory%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KO2aHztGs70j",
+        "outputId": "ef83672a-5c56-432d-9a49-bca0ede2ba34"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I am Meriales, Maverek Dhax M. And my Student Number is 202117420\n"
+          ]
+        }
+      ],
+      "source": [
+        "class OOP_58002:\n",
+        "  def __init__(self,name,number):\n",
+        "    self.name = name\n",
+        "    self.number = number\n",
+        "\n",
+        "  def description(self):\n",
+        "    return\"I am\"+ self.name+\" my Student Number is\"+self.number\n",
+        "\n",
+        "  def show(self):\n",
+        "    print(\"I am \"+ self.name+ \" And my Student Number is \"+self.number)\n",
+        "\n",
+        "OOP_580021 = OOP_58002(\"Meriales, Maverek Dhax M.\", \"202117420\")\n",
+        "OOP_580021.show()"
+      ]
+    }
+  ]
+}
