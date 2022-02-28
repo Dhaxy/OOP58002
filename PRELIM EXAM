@@ -1,0 +1,66 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled5.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMyjPGmN+T9tr05EsuYNz8c",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Dhaxy/OOP58002/blob/main/PRELIM%20EXAM\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yo2YCbQYHqzE",
+        "outputId": "2269885e-0a04-4f07-da14-f4a7602e423e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I am  Maverek Dhax M. Meriales. my age is 19 my student number is 202117420 studying in Adamson University and I am taking BS.Computer Engineering\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Person:\n",
+        "  def __init__(self,student,number,age,school,course):\n",
+        "    self.student = student\n",
+        "    self.number = number\n",
+        "    self.age = age\n",
+        "    self.school = school\n",
+        "    self.course = course\n",
+        "  \n",
+        "  def myFunction(self):\n",
+        "    print(\"I am \",self.student,\"my age is\",self.age, \"my student number is\",self.number, \"studying in\", self.school, \"and I am taking\", self.course)\n",
+        "\n",
+        "p1= Person(\"Maverek Dhax M. Meriales.\", 202117420, 19, \"Adamson University\", \"BS.Computer Engineering\")\n",
+        "p1.myFunction()"
+      ]
+    }
+  ]
+}
