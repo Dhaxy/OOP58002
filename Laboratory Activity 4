@@ -1,0 +1,309 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled6.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "authorship_tag": "ABX9TyPNpKq8b/f++d2G9kDymVDw",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Dhaxy/OOP58002/blob/main/Laboratory%20Activity%204\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Classes with Multiple Objects\n"
+      ],
+      "metadata": {
+        "id": "0p2yu5YBIdCl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZlcMhsf_IZa2",
+        "outputId": "89eff2c4-c182-400a-e6a4-7bc91de434e3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Eagle flies above clouds \n",
+            "Common Crane flies above clouds \n",
+            "Maya is the national bird of the Philippines\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Birds:\n",
+        "  def __init__(self,bird_name):\n",
+        "    self.bird_name= bird_name\n",
+        "\n",
+        "  def flying_birds(self):\n",
+        "    print(f\"{self.bird_name} flies above clouds \")\n",
+        "\n",
+        "  def non_flying_birds(self):\n",
+        "    print(f\"{self.bird_name} is the national bird of the Philippines\")\n",
+        "\n",
+        "vulture = Birds(\"Eagle\")\n",
+        "crane = Birds(\"Common Crane\")\n",
+        "emu = Birds(\"Maya\")\n",
+        "\n",
+        "vulture.flying_birds()\n",
+        "crane.flying_birds()\n",
+        "emu.non_flying_birds()"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Encapsulation"
+      ],
+      "metadata": {
+        "id": "oL2dmYbPIkBk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class foo:\n",
+        "  def __init__(self,a,b):\n",
+        "    self.__a = a\n",
+        "    self.__b = b\n",
+        "  def add(self):\n",
+        "    return self.__a + self.__b\n",
+        "  def sub(self):\n",
+        "    return self.__a - self.__b\n",
+        "\n",
+        "foo_object = foo(3,4)\n",
+        "\n",
+        "print(foo_object.add())\n",
+        "print(foo_object.sub())\n",
+        "\n",
+        "foo_object.__b = 5\n",
+        "foo_object.__a = 7\n",
+        "\n",
+        "print(foo_object.add())\n",
+        "print(foo_object.sub())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1rErD5itIfkE",
+        "outputId": "c42676e5-406e-40d4-acae-f64f2ee3616e"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "7\n",
+            "-1\n",
+            "7\n",
+            "-1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Inheritance"
+      ],
+      "metadata": {
+        "id": "IGN4eOYjIl00"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  def __init__(self,firstname,surname):\n",
+        "    self.firstname = firstname\n",
+        "    self. surname = surname\n",
+        "  \n",
+        "  def printname(self):\n",
+        "    print(self.firstname,self.surname)\n",
+        "\n",
+        "person = Person(\"Maverek Dhax\",\"Meriales\")\n",
+        "person.printname()\n",
+        "\n",
+        "class Student(Person):\n",
+        "  pass\n",
+        "\n",
+        "person = Student(\"Mam\",\"Sayo\")\n",
+        "person.printname()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AMdNE4p1InqG",
+        "outputId": "8d3623b8-fcb4-4482-9fda-11c969c1e74b"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Maverek Dhax Meriales\n",
+            "Mam Sayo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Polymorphism"
+      ],
+      "metadata": {
+        "id": "NmtUw0rqI0uF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class RegularPolygon:\n",
+        "  def __init__(self,side):\n",
+        "    self.side = side\n",
+        "class Square(RegularPolygon):\n",
+        "    def area(self):\n",
+        "      return self.side*self.side\n",
+        "class EquilateralTriangle(RegularPolygon):\n",
+        "  def area(self):\n",
+        "    return self.side*self.side*0.433\n",
+        "\n",
+        "x = Square(4)\n",
+        "y = EquilateralTriangle(3)\n",
+        "\n",
+        "print(x.area())\n",
+        "print(y.area())"
+      ],
+      "metadata": {
+        "id": "q9R91BQWI24Z"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Application 1"
+      ],
+      "metadata": {
+        "id": "n2dF4LZ8JK8F"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.Create a Python Program that displays the name of three students (Student 1, Student 2, Student 3) and their term grades\n",
+        "\n",
+        "2.Create a class name Person and Attributes - std1, std2, std3,pre,mid,fin\n",
+        "\n",
+        "3.Compute the Average of each term grade using Grade() method\n",
+        "\n",
+        "4.Information about student's grades must be hidden from others"
+      ],
+      "metadata": {
+        "id": "89mw4dTUI9hp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        "  def __init__(self,std1,std2,std3,pre,mid,fin):\n",
+        "    self.std1 = std1\n",
+        "    self.std2 = std2\n",
+        "    self.std3 = std3\n",
+        "    self.pre = pre\n",
+        "    self.mid = mid\n",
+        "    self.fin = fin\n",
+        "\n",
+        "Student1 = { \"name\":\"Student 1\",\n",
+        "\t\t\"Prelim\" : [85],\n",
+        "\t\t\"Midterm\" : [95],\n",
+        "\t\t\"Final\" : [98.90]\n",
+        "\t}\n",
+        "\t\t\n",
+        "Student2 = { \"name\":\"Student 2\",\n",
+        "\t\t\"Prelim\" : [82],\n",
+        "\t\t\"Midterm\" : [80],\n",
+        "\t\t\"Final\" : [87.90]\n",
+        "\t\t}\n",
+        "\n",
+        "Student3 = { \"name\" : \"Student 3\",\n",
+        "\t\t\"Prelim\" : [93],\n",
+        "\t\t\"Midterm\" : [98],\n",
+        "\t\t\"Final\" : [80]\n",
+        "\t\t}\n",
+        "\n",
+        "def get_average(marks):\n",
+        "\ttotal_sum = sum(marks)\n",
+        "\ttotal_sum = float(total_sum)\n",
+        "\treturn total_sum / len(marks)\n",
+        "\t\n",
+        " \n",
+        "def calculate_total_average(students):\n",
+        "\tPrelim = get_average(students[\"Prelim\"])\n",
+        "\tMidterm = get_average(students[\"Midterm\"])\n",
+        "\tFinal = get_average(students[\"Final\"])\n",
+        "\treturn (0.3 * Prelim + 0.3 * Midterm + 0.4 * Final)\n",
+        "\n",
+        "students = [Student1, Student2, Student3]\n",
+        "\n",
+        "for i in students :\n",
+        "  print(i[\"name\"])\n",
+        "  print(\"_______________________\")\n",
+        "  print(\"Prelim Marks of %s is : %s \" %(i[\"name\"],\n",
+        "    calculate_total_average(i)))\n",
+        "\n",
+        "for i in students :\n",
+        "  print(i[\"name\"])\n",
+        "  print(\"_______________________\")\n",
+        "  print(\"Midterm Marks of %s is : %s \" %(i[\"name\"],\n",
+        "    calculate_total_average(i)))\n",
+        "\n",
+        "for i in students :\n",
+        "  print(i[\"name\"])\n",
+        "  print(\"_______________________\")\n",
+        "  print(\"Final Marks of %s is : %s \" %(i[\"name\"],\n",
+        "    calculate_total_average(i)))"
+      ],
+      "metadata": {
+        "id": "4Q2_NYFHI5ED"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
